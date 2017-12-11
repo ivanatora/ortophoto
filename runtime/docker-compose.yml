@@ -6,10 +6,10 @@ services:
     labels:
       kompose.service.type: nodeport
     ports:
-      - '80:80'
-      - '443:443'
+      - '8010:80'
+#      - '443:443'
     volumes:
-      - 'apache_data:/bitnami'
+      - '../webroot/:/app'
 volumes:
   apache_data:
     driver: local
