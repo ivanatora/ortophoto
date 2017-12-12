@@ -17,7 +17,6 @@ $(document).ready(function () {
         access_token: 'pk.eyJ1Ijoib3BlbnN0cmVldG1hcCIsImEiOiJhNVlHd29ZIn0.ti6wATGDWOmCnCYen-Ip7Q'
     });
 
-    var tileServerUrl = 'http://' + window.location.hostname + '/tiles'
     L.control.scale().addTo(map);
     var hash = new L.Hash(map);
 
