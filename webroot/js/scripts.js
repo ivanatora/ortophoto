@@ -17,7 +17,7 @@ $(document).ready(function () {
         access_token: 'pk.eyJ1Ijoib3BlbnN0cmVldG1hcCIsImEiOiJhNVlHd29ZIn0.ti6wATGDWOmCnCYen-Ip7Q'
     });
 
-    var tileServerUrl = 'http://' + window.location.hostname + ':8011'
+    var tileServerUrl = 'http://' + window.location.hostname + '/tiles'
 
     var layerBedechka = L.tileLayer(tileServerUrl + '/StaraZagora/2017_12_10_Bedechka/{z}/{x}/{-y}.png', {
         maxZoom: 23
