@@ -72,6 +72,14 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerCenter1 = L.tileLayer(tileServerUrl + '/2017_12_14_Plovdiv_Central_1/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerCenter2 = L.tileLayer(tileServerUrl + '/2017_12_14_Plovdiv_Central_2/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
@@ -83,6 +91,8 @@ $(document).ready(function () {
             'Марица 1': layerMarica1,
             'Марица 2': layerMarica2,
             'Дондуков парк': layerDondukov,
+            'Център 1': layerCenter1,
+            'Център 2': layerCenter2,
         }).addTo(map);
     }
 
