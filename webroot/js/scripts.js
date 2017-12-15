@@ -21,19 +21,19 @@ $(document).ready(function () {
     var hash = new L.Hash(map);
 
     if (layers == 'StaraZagora') {
-        var layerBedechka = L.tileLayer(tileServerUrl + '/2017_12_10_Bedechka/{z}/{x}/{-y}.png', {
+        var layerSzBedechka = L.tileLayer(tileServerUrl + '/2017_12_10_Bedechka/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerZagorka = L.tileLayer(tileServerUrl + '/2017_12_10_Zagorka/{z}/{x}/{-y}.png', {
+        var layerSzZagorka = L.tileLayer(tileServerUrl + '/2017_12_10_Zagorka/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerKaufland1 = L.tileLayer(tileServerUrl + '/2017_12_10_Kaufland_1/{z}/{x}/{-y}.png', {
+        var layerSzKaufland1 = L.tileLayer(tileServerUrl + '/2017_12_10_Kaufland_1/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerKaufland2 = L.tileLayer(tileServerUrl + '/2017_12_10_Kaufland_2/{z}/{x}/{-y}.png', {
+        var layerSzKaufland2 = L.tileLayer(tileServerUrl + '/2017_12_10_Kaufland_2/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
@@ -42,41 +42,45 @@ $(document).ready(function () {
             'Google': googleSatLayer,
             'Mapbox': mapboxLayer
         }, {
-            'Загорка': layerZagorka,
-            'Бедечка': layerBedechka,
-            'Кауфланд юг': layerKaufland1,
-            'Кауфланд север': layerKaufland2,
+            'Загорка': layerSzZagorka,
+            'Бедечка': layerSzBedechka,
+            'Кауфланд юг': layerSzKaufland1,
+            'Кауфланд север': layerSzKaufland2,
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
-        var layerBilla = L.tileLayer(tileServerUrl + '/2017_11_26_Billa_Grobishte/{z}/{x}/{-y}.png', {
+        var layerPlovdivBilla = L.tileLayer(tileServerUrl + '/2017_11_26_Billa_Grobishte/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerBazilika = L.tileLayer(tileServerUrl + '/2017_12_02_Bazilika/{z}/{x}/{-y}.png', {
+        var layerPlovdivBazilika = L.tileLayer(tileServerUrl + '/2017_12_02_Bazilika/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerCentral = L.tileLayer(tileServerUrl + '/2017_12_02_Central_Square_fixed/{z}/{x}/{-y}.png', {
+        var layerPlovdivCentral = L.tileLayer(tileServerUrl + '/2017_12_02_Central_Square_fixed/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerMarica1 = L.tileLayer(tileServerUrl + '/2017_12_12_Marica_1/{z}/{x}/{-y}.png', {
+        var layerPlovdivMarica1 = L.tileLayer(tileServerUrl + '/2017_12_12_Marica_1/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerMarica2 = L.tileLayer(tileServerUrl + '/2017_12_12_Marica_2/{z}/{x}/{-y}.png', {
+        var layerPlovdivMarica2 = L.tileLayer(tileServerUrl + '/2017_12_12_Marica_2/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerDondukov = L.tileLayer(tileServerUrl + '/2017_12_13_Dondukov_Garden/{z}/{x}/{-y}.png', {
+        var layerPlovdivDondukov = L.tileLayer(tileServerUrl + '/2017_12_13_Dondukov_Garden/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerCenter1 = L.tileLayer(tileServerUrl + '/2017_12_14_Plovdiv_Central_1/{z}/{x}/{-y}.png', {
+        var layerPlovdivCenter1 = L.tileLayer(tileServerUrl + '/2017_12_14_Plovdiv_Central_1/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
-        var layerCenter2 = L.tileLayer(tileServerUrl + '/2017_12_14_Plovdiv_Central_2/{z}/{x}/{-y}.png', {
+        var layerPlovdivCenter2 = L.tileLayer(tileServerUrl + '/2017_12_14_Plovdiv_Central_2/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerPlovdivOldTown = L.tileLayer(tileServerUrl + '/2017_12_15_Plovdiv_Old_Town/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
@@ -85,14 +89,15 @@ $(document).ready(function () {
             'Google': googleSatLayer,
             'Mapbox': mapboxLayer
         }, {
-            'Била 1': layerBilla,
-            'Базилика': layerBazilika,
-            'Централна поща': layerCentral,
-            'Марица 1': layerMarica1,
-            'Марица 2': layerMarica2,
-            'Дондуков парк': layerDondukov,
-            'Център 1': layerCenter1,
-            'Център 2': layerCenter2,
+            'Била 1': layerPlovdivBilla,
+            'Базилика': layerPlovdivBazilika,
+            'Централна поща': layerPlovdivCentral,
+            'Марица 1': layerPlovdivMarica1,
+            'Марица 2': layerPlovdivMarica2,
+            'Дондуков парк': layerPlovdivDondukov,
+            'Център 1': layerPlovdivCenter1,
+            'Център 2': layerPlovdivCenter2,
+            'Стар Град': layerPlovdivOldTown,
         }).addTo(map);
     }
 
