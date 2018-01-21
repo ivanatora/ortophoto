@@ -37,7 +37,19 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
-	var layerSzArtileriiski = L.tileLayer(tileServerUrl + '/2018_01_14_Artileriiski/{z}/{x}/{-y}.png', {
+	    var layerSzArtileriiski = L.tileLayer(tileServerUrl + '/2018_01_14_Artileriiski/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+	    var layerSzPiperka = L.tileLayer(tileServerUrl + '/2018_01_20_Piperka/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerSzStancionna = L.tileLayer(tileServerUrl + '/2018_01_20_Stancionna/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+    
+        var layerSzZelenKlin = L.tileLayer(tileServerUrl + '/2018_01_20_ZelenKlin/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
@@ -50,7 +62,10 @@ $(document).ready(function () {
             'Бедечка': layerSzBedechka,
             'Кауфланд юг': layerSzKaufland1,
             'Кауфланд север': layerSzKaufland2,
-	    'Парк Артилерийски': layerSzArtileriiski
+	        'Парк Артилерийски': layerSzArtileriiski,
+		    'Парк Баня Пиперка': layerSzPiperka,
+            'Станционна градина': layerSzStancionna,
+            'Парк Зелен Клин': layerSzZelenKlin
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
         var layerPlovdivBilla = L.tileLayer(tileServerUrl + '/2017_11_26_Billa_Grobishte/{z}/{x}/{-y}.png', {
