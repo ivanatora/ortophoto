@@ -53,6 +53,10 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerSzSamarskoZname = L.tileLayer(tileServerUrl + '/2018_02_18_Samarsko_Zname/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
@@ -65,7 +69,8 @@ $(document).ready(function () {
 	        'Парк Артилерийски': layerSzArtileriiski,
 		    'Парк Баня Пиперка': layerSzPiperka,
             'Станционна градина': layerSzStancionna,
-            'Парк Зелен Клин': layerSzZelenKlin
+            'Парк Зелен Клин': layerSzZelenKlin,
+            'Самарско Знаме': layerSzSamarskoZname
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
         var layerPlovdivBilla = L.tileLayer(tileServerUrl + '/2017_11_26_Billa_Grobishte/{z}/{x}/{-y}.png', {
@@ -104,6 +109,10 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerPlovdivAlyosha = L.tileLayer(tileServerUrl + '/2018_02_01_Alyosha/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
@@ -118,6 +127,7 @@ $(document).ready(function () {
             'Център 1': layerPlovdivCenter1,
             'Център 2': layerPlovdivCenter2,
             'Стар Град': layerPlovdivOldTown,
+            'Альоша': layerPlovdivAlyosha,
         }).addTo(map);
     }
 
