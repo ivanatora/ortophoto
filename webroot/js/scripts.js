@@ -127,12 +127,17 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerPlovdivCemeteryWest = L.tileLayer(tileServerUrl + '/2018_04_11_Cemetery_West/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
             'Mapbox': mapboxLayer
         }, {
             'Била 1': layerPlovdivBilla,
+            'Гробище Запад': layerPlovdivCemeteryWest,
             'Базилика': layerPlovdivBazilika,
             'Централна поща': layerPlovdivCentral,
             'Марица 1': layerPlovdivMarica1,
