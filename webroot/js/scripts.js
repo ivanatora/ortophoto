@@ -53,7 +53,11 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
-        var layerSzSamarskoZname = L.tileLayer(tileServerUrl + '/2018_02_18_Samarsko_Zname/{z}/{x}/{-y}.png', {
+        var layerSzSamarskoZnameWest = L.tileLayer(tileServerUrl + '/2018_02_18_Samarsko_Zname/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerSzSamarskoZnameEast = L.tileLayer(tileServerUrl + '/2018_04_13_Samarsko_Zname/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
 
@@ -75,7 +79,8 @@ $(document).ready(function () {
 		    'Парк Баня Пиперка': layerSzPiperka,
             'Станционна градина': layerSzStancionna,
             'Парк Зелен Клин': layerSzZelenKlin,
-            'Самарско Знаме': layerSzSamarskoZname,
+            'Самарско Знаме Запад': layerSzSamarskoZnameWest,
+            'Самарско Знаме Изток': layerSzSamarskoZnameEast,
             'Стадион Берое': layerSzStadionBeroe
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
