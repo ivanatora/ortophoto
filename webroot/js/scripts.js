@@ -65,6 +65,9 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerSzCenter = L.tileLayer(tileServerUrl + '/2018_04_14_Center/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
 
         L.control.layers({
             'OpenStreetMap': osmLayer,
@@ -81,7 +84,8 @@ $(document).ready(function () {
             'Парк Зелен Клин': layerSzZelenKlin,
             'Самарско Знаме Запад': layerSzSamarskoZnameWest,
             'Самарско Знаме Изток': layerSzSamarskoZnameEast,
-            'Стадион Берое': layerSzStadionBeroe
+            'Стадион Берое': layerSzStadionBeroe,
+            'Център': layerSzCenter
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
         var layerPlovdivBilla = L.tileLayer(tileServerUrl + '/2017_11_26_Billa_Grobishte/{z}/{x}/{-y}.png', {
