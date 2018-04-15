@@ -65,6 +65,14 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerSzVereya = L.tileLayer(tileServerUrl + '/2018_04_15_Vereya/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerSzAturen = L.tileLayer(tileServerUrl + '/2018_04_15_Aturen/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         var layerSzCenter = L.tileLayer(tileServerUrl + '/2018_04_14_Center/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
@@ -85,7 +93,9 @@ $(document).ready(function () {
             'Самарско Знаме Запад': layerSzSamarskoZnameWest,
             'Самарско Знаме Изток': layerSzSamarskoZnameEast,
             'Стадион Берое': layerSzStadionBeroe,
-            'Център': layerSzCenter
+            'Център': layerSzCenter,
+            'Верея': layerSzVereya,
+            'Атюрен': layerSzAturen
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
         var layerPlovdivBilla = L.tileLayer(tileServerUrl + '/2017_11_26_Billa_Grobishte/{z}/{x}/{-y}.png', {
