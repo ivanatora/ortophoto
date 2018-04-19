@@ -69,6 +69,10 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerSzVereya2 = L.tileLayer('http://77.70.24.213/f1/imagery/32_2018-04-15_0_Stz/{z}/{x}/{y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         var layerSzAturen = L.tileLayer(tileServerUrl + '/2018_04_15_Aturen/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
@@ -95,6 +99,7 @@ $(document).ready(function () {
             'Стадион Берое': layerSzStadionBeroe,
             'Център': layerSzCenter,
             'Верея': layerSzVereya,
+            'Верея 2': layerSzVereya2,
             'Атюрен': layerSzAturen
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
@@ -150,11 +155,17 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerPlovdivBratskaMogila = L.tileLayer(tileServerUrl + '/2018_04_18_Bratska_Mogila/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
             'Mapbox': mapboxLayer
         }, {
+            'Mall Pld': layerPlovdivMallPld,
+            'Братска могила': layerPlovdivBratskaMogila,
             'Била 1': layerPlovdivBilla,
             'Гробище Запад': layerPlovdivCemeteryWest,
             'Базилика': layerPlovdivBazilika,
@@ -167,7 +178,6 @@ $(document).ready(function () {
             'Стар Град': layerPlovdivOldTown,
             'Альоша': layerPlovdivAlyosha,
             'SPS': layerPlovdivSps,
-            'Mall Pld': layerPlovdivMallPld,
         }).addTo(map);
     }
 
