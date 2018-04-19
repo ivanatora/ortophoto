@@ -103,6 +103,14 @@ $(document).ready(function () {
             'Атюрен': layerSzAturen
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
+        var layerPlovdivBillaMarica = L.tileLayer(tileServerUrl + '/2018_04_19_Billa_Marica/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerPlovdivAdzhasan = L.tileLayer(tileServerUrl + '/2018_04_19_Adzhasan/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         var layerPlovdivBilla = L.tileLayer(tileServerUrl + '/2017_11_26_Billa_Grobishte/{z}/{x}/{-y}.png', {
             maxZoom: 23
         }).addTo(map);
@@ -164,6 +172,8 @@ $(document).ready(function () {
             'Google': googleSatLayer,
             'Mapbox': mapboxLayer
         }, {
+            'Аджасан': layerPlovdivAdzhasan,
+            'Била Марица': layerPlovdivBillaMarica,
             'Mall Pld': layerPlovdivMallPld,
             'Братска могила': layerPlovdivBratskaMogila,
             'Била 1': layerPlovdivBilla,
