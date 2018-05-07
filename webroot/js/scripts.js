@@ -81,6 +81,10 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerSzViliOkolovrasno = L.tileLayer(tileServerUrl + '/2018_04_28_Vili_Okolovrasno/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
@@ -100,7 +104,8 @@ $(document).ready(function () {
             'Център': layerSzCenter,
             'Верея': layerSzVereya,
             'Верея 2': layerSzVereya2,
-            'Атюрен': layerSzAturen
+            'Атюрен': layerSzAturen,
+            'Околовръсно Север': layerSzViliOkolovrasno
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
         var layerPlovdivBillaMarica = L.tileLayer(tileServerUrl + '/2018_04_19_Billa_Marica/{z}/{x}/{-y}.png', {
@@ -171,6 +176,18 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerPlovdivDzhendem = L.tileLayer(tileServerUrl + '/2018_04_28_Dzhendem/{z}/{x}/{y}.png', {
+            maxZoom: 19
+        }).addTo(map);
+
+        var layerPlovdivCamping4Km = L.tileLayer(tileServerUrl + '/2018_05_07_Camping_4km/{z}/{x}/{-y}.png', {
+            maxZoom: 19
+        }).addTo(map);
+
+        var layerPlovdivStadion = L.tileLayer(tileServerUrl + '/2018_05_07_Stadion_Plovdiv/{z}/{x}/{-y}.png', {
+            maxZoom: 19
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
@@ -193,6 +210,9 @@ $(document).ready(function () {
             'Альоша': layerPlovdivAlyosha,
             'SPS': layerPlovdivSps,
             'Зоопарк': layerPlovdivZoo,
+            'Джендем тепе': layerPlovdivDzhendem,
+		    'Къмпинг 4км': layerPlovdivCamping4Km,
+            'Стадион Пловдив': layerPlovdivStadion,
         }).addTo(map);
     }
 
