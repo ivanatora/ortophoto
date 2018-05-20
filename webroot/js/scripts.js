@@ -89,6 +89,10 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerSzSvTroica = L.tileLayer(tileServerUrl + '/2018_05_19_Sv_Troica/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
@@ -110,7 +114,8 @@ $(document).ready(function () {
             'Верея 2': layerSzVereya2,
             'Атюрен': layerSzAturen,
             'Околовръсно Север': layerSzViliOkolovrasno,
-            'Гробище Изток': layerSzCemeteryEast
+            'Гробище Изток': layerSzCemeteryEast,
+            'Св. Троица': layerSzSvTroica
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
         var layerPlovdivBillaMarica = L.tileLayer(tileServerUrl + '/2018_04_19_Billa_Marica/{z}/{x}/{-y}.png', {
