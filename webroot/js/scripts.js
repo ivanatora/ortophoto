@@ -93,6 +93,22 @@ $(document).ready(function () {
             maxZoom: 23
         }).addTo(map);
 
+        var layerSzMostIndustrialna = L.tileLayer(tileServerUrl + '/2018_07_01_Most_Industrialna/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerSzBaniEzero = L.tileLayer(tileServerUrl + '/2018_07_01_Starozagorski_Bani/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerSzBedechkaBeerfest = L.tileLayer(tileServerUrl + '/2018_09_07_Bedechka_Beerfest/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerSzMostIndustrialna2 = L.tileLayer(tileServerUrl + '/2018_09_08_Most_Industrialna/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
@@ -115,7 +131,11 @@ $(document).ready(function () {
             'Атюрен': layerSzAturen,
             'Околовръсно Север': layerSzViliOkolovrasno,
             'Гробище Изток': layerSzCemeteryEast,
-            'Св. Троица': layerSzSvTroica
+            'Св. Троица': layerSzSvTroica,
+            'Бани - езеро': layerSzBaniEzero,
+            'Ремонт мост - Юли': layerSzMostIndustrialna,
+            'Ремонт мост - Септ': layerSzMostIndustrialna2,
+            'Бедечка - Бирфест': layerSzBedechkaBeerfest,
         }).addTo(map);
     } else if (layers == 'Plovdiv') {
         var layerPlovdivBillaMarica = L.tileLayer(tileServerUrl + '/2018_04_19_Billa_Marica/{z}/{x}/{-y}.png', {
@@ -198,6 +218,18 @@ $(document).ready(function () {
             maxZoom: 19
         }).addTo(map);
 
+        var layerPlovdivOstromilaCenter = L.tileLayer(tileServerUrl + '/2018_09_13_Ostromila_Center/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerPlovdivOstromilaWest = L.tileLayer(tileServerUrl + '/2018_09_13_Ostromila_West/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
+        var layerPlovdivOstromilaEast = L.tileLayer(tileServerUrl + '/2018_09_13_Ostromila_East/{z}/{x}/{-y}.png', {
+            maxZoom: 23
+        }).addTo(map);
+
         L.control.layers({
             'OpenStreetMap': osmLayer,
             'Google': googleSatLayer,
@@ -223,7 +255,10 @@ $(document).ready(function () {
             'Джендем тепе': layerPlovdivDzhendem,
 		    'Къмпинг 4км': layerPlovdivCamping4Km,
             'Стадион Пловдив': layerPlovdivStadion,
+            'Остромила Център': layerPlovdivOstromilaCenter,
+            'Остромила Запад': layerPlovdivOstromilaWest,
+            'Остромила Изток': layerPlovdivOstromilaEast,
         }).addTo(map);
     }
-
 });
+
